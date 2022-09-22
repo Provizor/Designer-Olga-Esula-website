@@ -46,13 +46,13 @@
     fadeDuration: 500,
     fitImagesInViewport: false, // фиксированный размер изображения попап
     imageFadeDuration: 500,
-    // maxWidth: 800,
-    // maxHeight: 600,
+    maxHeight: 2000,
     positionFromTop: 50,
     resizeDuration: 500,
     showImageNumberLabel: false, // Нумерация изображения
     wrapAround: false,
     disableScrolling: false,
+    // maxWidth: 800,
     /*
     Sanitize Title
     If the caption data is trusted, for example you are hardcoding it in, then leave this to false.
