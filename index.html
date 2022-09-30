@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
   <!-- Шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/lightbox.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Esula design</title>
@@ -64,6 +63,7 @@
             <h1 class="hero__title">Создание сайтов</h1>
             <p class="hero__descr">Поможем эффективно заявить о себе и своём бизнесе в интернете</p>
             <a id="popup__open" href="#" class="hero__btn popup__open">Заказать проект</a>
+            <a id="popup__open" href="#" class="hero__btn--anim popup__open">Заказать проект</a>
           </div>
           <div class="hero__prew">
             <div class="hero__slider">
@@ -93,8 +93,7 @@
                 <img class="hero__slide hero__slide-img-3" src="img/slide-5-img-bottom-2.png" alt="">
               </div>
             </div>
-            <a class="hero__slider-link" href="https://www.behance.net/olgaesula" target="_blank"
-              tabindex="0">Посмотреть проекты</a>
+            <a class="hero__slider-link" href="#gallery" tabindex="0">Посмотреть проекты</a>
           </div>
         </div>
       </div>
@@ -120,25 +119,60 @@
       <div class="container">
         <div class="gallery__inner">
           <h2 class="gallery__title title">Галерея проектов</h2>
-          <div id="gallery__list" class="gallery__list">
-            <a class="gallery__item gallery__item-1" href="img/present-1.jpg" data-lightbox="image-1">
-              <img class="gallery__img" src="img/foto-1.jpg" alt="">
-            </a>
-            <a class="gallery__item gallery__item-2" href="img/present-2.jpg" data-lightbox="image-1">
-              <img class="gallery__img" src="img/foto-2.jpg" alt="">
-            </a>
-            <a class="gallery__item gallery__item-3" href="img/present-3.png" data-lightbox="image-1">
-              <img class="gallery__img" src="img/foto-3.jpg" alt="">
-            </a>
-            <a class="gallery__item gallery__item-4" href="img/present-4.jpg" data-lightbox="image-1">
-              <img class="gallery__img" src="img/foto-4.jpg" alt="">
-            </a>
-            <a class="gallery__item gallery__item-5" href="img/present-5.jpg" data-lightbox="image-1">
-              <img class="gallery__img" src="img/foto-5.jpg" alt="">
-            </a>
+          <ul id="gallery__list" class="gallery__list">
+            <li class="gallery__item gallery__item-1" href="#" onclick="openModal();currentSlide(1)">
+              <img class="gallery__img" src="img/foto-1.jpg" alt="Aeroflot">
+            </li>
+            <li class="gallery__item gallery__item-2" href="#" onclick="openModal();currentSlide(2)">
+              <img class="gallery__img" src="img/foto-2.jpg" alt="Design conference">
+            </li>
+            <li class="gallery__item gallery__item-3" href="#" onclick="openModal();currentSlide(3)">
+              <img class="gallery__img" src="img/foto-3.jpg" alt="Royal owl works">
+            </li>
+            <li class="gallery__item gallery__item-4" href="#" onclick="openModal();currentSlide(4)">
+              <img class="gallery__img" src="img/foto-4.jpg" alt="Seven seeds">
+            </li>
+            <li class="gallery__item gallery__item-5" href="#" onclick="openModal();currentSlide(5)">
+              <img class="gallery__img" src="img/foto-5.jpg" alt="Ukvartira">
+            </li>
+          </ul>
+
+          <div id="myModal" class="gallery__modal">
+            <div class="gallery__modal-content">
+              <span class="gallery__close cursor" onclick="closeModal()" tabindex="0">&#10006;</span>
+
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-1.jpg" onclick="currentSlide(1)">
+              </div>
+
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-2.jpg" onclick="currentSlide(2)">
+              </div>
+
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-3.png" onclick="currentSlide(3)">
+              </div>
+
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-4.jpg" onclick="currentSlide(4)">
+              </div>
+
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-5.jpg" onclick="currentSlide(5)">
+              </div>
+
+              <!--   вперед = назад       -->
+              <a class="gallery__prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="gallery__next" onclick="plusSlides(1)">&#10095;</a>
+              <!--   вперед = назад       -->
+            </div>
+            <div class="gallery__overlay" onclick="closeModal()">
+            </div>
           </div>
-          <p class="gallery__descr">Посмотреть все проекты можно <a class="gallery__link"
-              href="https://www.behance.net/olgaesula" target="_blank">здесь</a></p>
+          <div>
+            <p class="gallery__descr">Посмотреть все проекты можно <a class="gallery__link"
+                href="https://www.behance.net/olgaesula" target="_blank">здесь</a></p>
+          </div>
         </div>
       </div>
     </section>
@@ -153,6 +187,7 @@
                   <div class="step__card-top flex">
                     <span class="step__card-number">1</span>
                     <h3 class="step__card-title">Формулировка задачи</h3>
+                    <span class="step__card-arrow"></span>
                   </div>
                   <div class="step__card-bottom flex">
                     <img src="img/card-download.svg" alt="Скачать" class="step__card-img">
@@ -168,6 +203,7 @@
                   <div class="step__card-top flex">
                     <span class="step__card-number">2</span>
                     <h3 class="step__card-title">Заказ проекта</h3>
+                    <span class="step__card-arrow"></span>
                   </div>
                   <div class="step__card-bottom flex">
                     <ul class="step__card-list flex">
@@ -201,6 +237,7 @@
                   <div class="step__card-top flex">
                     <span class="step__card-number">3</span>
                     <h3 class="step__card-title">Согласование стоимости</h3>
+                    <span class="step__card-arrow"></span>
                   </div>
                   <div class="step__card-bottom flex">
                     <img src="img/mastercard.svg" alt="Карта оплаты" class="step__card-img">
@@ -218,6 +255,7 @@
                   <div class="step__card-top flex">
                     <span class="step__card-number">4</span>
                     <h3 class="step__card-title">Приёмка работы</h3>
+                    <span class="step__card-arrow"></span>
                   </div>
                   <div class="step__card-bottom flex">
                     <img src="img/mastercard.svg" alt="Карта оплаты" class="step__card-img">
@@ -649,49 +687,46 @@
   </footer>
 
   <!-- всплывающие элементы -->
-  <button class="btn scroll_top" title="Наверх"></button>
+  <button class="btn scroll-top" title="Наверх"></button>
 
-  <div id="popup" class="popup">
-    <div class="popup__container">
-      <div id="popup__body" class="popup__body">
-        <h3 class="popup__title"> Выберите тип сайта</h3>
-        <ul class="popup__list-input">
-          <li class="popup__item-input">
-            <label class="popup__radio">
-              <input class="popup__input" type="radio" name="Сайт" value="Лэндинг">
-              <span class="popup__check" tabindex="0">Лэндинг</span>
-            </label>
-          </li>
-          <li class="popup__item-input">
-            <label class="popup__radio">
-              <input class="popup__input" type="radio" name="Сайт" value="Многостраничный сайт">
-              <span class="popup__check" tabindex="0">Многостраничный сайт</span>
-            </label>
-          </li>
-          <li class="popup__item-input">
-            <label class="popup__radio">
-              <input class="popup__input" type="radio" name="Сайт" value="Интернет-магазин">
-              <span class="popup__check" tabindex="0">Интернет-магазин</span>
-            </label>
-          </li>
-        </ul>
-        <h3 class="popup__title">Ваша почта для связи</h3>
-        <form class="popup__form-email">
-          <input class="popup__email" type="email" name="e-mail" placeholder="*@mail.ru">
-          <button class="popup__btn">Отправить заявку</button>
-        </form>
-        <p class="popup__text">Или в удобное для вас время заполните бриф</p>
-        <a class="popup__file" href="#" tabindex="0">Скачать бриф</a>
-        <span id="popup__close" class="popup__close">&#10006;</span>
-      </div>
-    </div>
+  <div class="popup">
+    <h3 class="popup__title">Выберите тип сайта</h3>
+    <ul class="popup__list-input">
+      <li class="popup__item-input">
+        <label class="popup__radio">
+          <input class="popup__input" type="radio" name="Сайт" value="Лэндинг">
+          <span class="popup__check" tabindex="0">Лэндинг</span>
+        </label>
+      </li>
+      <li class="popup__item-input">
+        <label class="popup__radio">
+          <input class="popup__input" type="radio" name="Сайт" value="Многостраничный сайт">
+          <span class="popup__check" tabindex="0">Многостраничный сайт</span>
+        </label>
+      </li>
+      <li class="popup__item-input">
+        <label class="popup__radio">
+          <input class="popup__input" type="radio" name="Сайт" value="Интернет-магазин">
+          <span class="popup__check" tabindex="0">Интернет-магазин</span>
+        </label>
+      </li>
+    </ul>
+    <h3 class="popup__title">Ваша почта для связи</h3>
+    <form class="popup__form-email">
+      <input class="popup__email" type="email" name="e-mail" placeholder="*@mail.ru">
+      <button class="popup__btn">Отправить заявку</button>
+      <button class="popup__btn--anim">Отправить заявку</button>
+    </form>
+    <p class="popup__text">Или в удобное для вас время заполните бриф</p>
+    <a class="popup__file" href="#" tabindex="0">Скачать бриф</a>
+    <span id="popup__close" class="popup__close" tabindex="0">&#10006;</span>
   </div>
+  <div class="overlay"></div>
 
   <!-- всплывающие элементы -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/lightbox.js"></script>
   <script src="js/main.js"></script>
 </body>
 
