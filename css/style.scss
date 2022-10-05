@@ -2208,6 +2208,10 @@ body.noscroll {
       line-height: 140%;
     }
 
+    &__list {
+      gap: 30px;
+    }
+
     &__card {
       display: flex;
     }

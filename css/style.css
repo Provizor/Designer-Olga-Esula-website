@@ -2247,6 +2247,9 @@ body.noscroll {
     font-size: 14px;
     line-height: 140%;
   }
+  .work__list {
+    gap: 30px;
+  }
   .work__card {
     display: -webkit-box;
     display: -ms-flexbox;
