@@ -92,7 +92,9 @@ img {
 }
 
 body.noscroll {
-  overflow: hidden;
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .container {
@@ -317,7 +319,7 @@ body.noscroll {
 .hero__slider .slick-arrow {
   position: absolute;
   top: 91.5%;
-  z-index: 10;
+  z-index: 9;
   width: 48px;
   height: 48px;
   font-size: 0;
@@ -531,13 +533,13 @@ body.noscroll {
 .gallery__modal-content {
   position: relative;
   z-index: 11;
-  max-width: 1280px;
+  width: 50vw;
   margin: auto;
   padding: 0;
 }
 
 .gallery__close {
-  position: absolute;
+  position: fixed;
   z-index: 12;
   top: 46px;
   right: 0px;
@@ -560,8 +562,8 @@ body.noscroll {
   font-weight: 400;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
 }
 
 .gallery__close:hover {
@@ -592,9 +594,9 @@ body.noscroll {
 }
 
 .gallery__prev, .gallery__next {
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  top: 50%;
+  top: 50vh;
   width: auto;
   margin-top: -50px;
   padding: 16px;
@@ -624,6 +626,21 @@ body.noscroll {
   margin-right: 15px;
   right: 0;
   border-radius: 3px 0 0 3px;
+}
+
+.gallery__prev-block, .gallery__next-block {
+  position: absolute;
+  width: 25vw;
+  height: 99%;
+  top: 0;
+}
+
+.gallery__prev-block {
+  left: 25vw;
+}
+
+.gallery__next-block {
+  right: 25vw;
 }
 
 .gallery__overlay {
@@ -682,6 +699,12 @@ body.noscroll {
   background-color: var(--white);
   -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
           box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.step__item:nth-child(2) .step__card-top {
+  margin-bottom: 83px;
 }
 
 .step__card {
@@ -805,6 +828,10 @@ body.noscroll {
   line-height: 140%;
   color: #333;
   background-color: #fff;
+}
+
+.ui-state-active.step__item {
+  outline: 2px solid var(--blue);
 }
 
 .work {
@@ -1125,7 +1152,7 @@ body.noscroll {
 
 .popup {
   position: fixed;
-  z-index: 102;
+  z-index: 11;
   top: 50px;
   left: 50%;
   width: 296px;
@@ -1395,8 +1422,8 @@ body.noscroll {
   color: #fff;
   font-size: 22px;
   cursor: pointer;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
 }
 
 .popup__close:hover {
@@ -1447,25 +1474,6 @@ body.noscroll {
   object-fit: contain;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.lb-data .lb-close {
-  position: absolute;
-  top: 0;
-  right: 5%;
-  width: 48px;
-  height: 48px;
-  background: url(../img/pop-close.svg) center center/cover no-repeat;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-.lb-data:hover .lb-close {
-  background-image: url(../img/pop-close-hov.svg);
-}
-
-.lb-data:active .lb-close {
-  background-image: url(../img/pop-close-focus.svg);
 }
 
 @media (max-width: 1024px) {
@@ -1669,6 +1677,9 @@ body.noscroll {
   .step__item {
     width: 562px;
   }
+  .step__item:nth-child(2) .step__card-top {
+    margin-bottom: 0;
+  }
   .step__card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1794,6 +1805,29 @@ body.noscroll {
   .gallery__list {
     gap: 16px;
   }
+  .gallery__list {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery__item-1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .gallery__item-2 {
+    grid-column: 3/-1;
+  }
+  .gallery__item-3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .gallery__item-4 {
+    grid-column: 3/-1;
+  }
+  .gallery__item-5 {
+    grid-column: 1/-1;
+  }
   .step::after {
     top: 235px;
     right: 18px;
@@ -1872,7 +1906,7 @@ body.noscroll {
   }
   .footer__email {
     margin-bottom: 10px;
-    font-size: 36px;
+    font-size: 30px;
   }
   .footer__contact-list {
     position: relative;
@@ -1965,6 +1999,9 @@ body.noscroll {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+  }
+  .ui-tabs {
+    width: 100%;
   }
   .popup {
     width: 260px;

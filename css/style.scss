@@ -93,7 +93,9 @@ img {
 }
 
 body.noscroll {
-  overflow: hidden;
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .container {
@@ -301,7 +303,7 @@ body.noscroll {
   &__slider .slick-arrow {
     position: absolute;
     top: 91.5%;
-    z-index: 10;
+    z-index: 9;
     width: 48px;
     height: 48px;
     font-size: 0
@@ -509,14 +511,14 @@ body.noscroll {
   &__modal-content {
     position: relative;
     z-index: 11;
-    max-width: 1280px;
+    width: 50vw;
     margin: auto;
     padding: 0;
   }
 
   // Кнопка закрытия
   &__close {
-    position: absolute;
+    position: fixed;
     z-index: 12;
     top: 46px;
     right: 0px;
@@ -533,7 +535,7 @@ body.noscroll {
     font-weight: 400;
     color: #fff;
     cursor: pointer;
-    transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
 
     &:hover {
       color: var(--pink);
@@ -566,9 +568,9 @@ body.noscroll {
 
   &__prev,
   &__next {
-    position: absolute;
+    position: fixed;
     z-index: 10;
-    top: 50%;
+    top: 50vh;
     width: auto;
     margin-top: -50px;
     padding: 16px;
@@ -595,6 +597,22 @@ body.noscroll {
     margin-right: 15px;
     right: 0;
     border-radius: 3px 0 0 3px;
+  }
+
+  &__prev-block,
+  &__next-block {
+    position: absolute;
+    width: 25vw;
+    height: 99%;
+    top:0;
+  }
+
+  &__prev-block {
+    left: 25vw;
+  }
+
+  &__next-block {
+    right: 25vw;
   }
 
   &__overlay {
@@ -650,7 +668,14 @@ body.noscroll {
   position: relative;
   width: 240px;
   background-color: var(--white);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, .12)
+  box-shadow: 0 4px 24px rgba(0, 0, 0, .12);
+  transition: .1s ease-in-out;
+
+  &:nth-child(2) {
+    .step__card-top {
+      margin-bottom: 83px;
+    }
+  }
 }
 
 .step__card {
@@ -760,6 +785,10 @@ body.noscroll {
   line-height: 140%;
   color: #333;
   background-color: #fff
+}
+
+.ui-state-active.step__item {
+  outline: 2px solid var(--blue);
 }
 
 .work {
@@ -1052,7 +1081,7 @@ body.noscroll {
 
 .popup {
   position: fixed;
-  z-index: 102;
+  z-index: 11;
   top: 50px;
   left: 50%;
   width: 296px;
@@ -1278,7 +1307,7 @@ body.noscroll {
     color: #fff;
     font-size: 22px;
     cursor: pointer;
-    transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
 
     &:hover {
       background-color: var(--white);
@@ -1326,24 +1355,6 @@ body.noscroll {
   -o-object-fit: contain;
   object-fit: contain;
   transform: translate(-50%, -50%)
-}
-
-.lb-data .lb-close {
-  position: absolute;
-  top: 0;
-  right: 5%;
-  width: 48px;
-  height: 48px;
-  background: url(../img/pop-close.svg) center center/cover no-repeat;
-  transition: .3s ease-in-out
-}
-
-.lb-data:hover .lb-close {
-  background-image: url(../img/pop-close-hov.svg)
-}
-
-.lb-data:active .lb-close {
-  background-image: url(../img/pop-close-focus.svg)
 }
 
 @media (max-width: 1024px) {
@@ -1536,6 +1547,12 @@ body.noscroll {
 
   .step__item {
     width: 562px;
+
+    &:nth-child(2) {
+      .step__card-top {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .step__card {
@@ -1679,6 +1696,30 @@ body.noscroll {
     &__list {
       gap: 16px;
     }
+
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item-1 {
+      grid-column: 1/3;
+    }
+
+    &__item-2 {
+      grid-column: 3/-1;
+    }
+
+    &__item-3 {
+      grid-column: 1/3;
+    }
+
+    &__item-4 {
+      grid-column: 3/-1;
+    }
+
+    &__item-5 {
+      grid-column: 1/-1;
+    }
   }
 
   .step {
@@ -1772,7 +1813,7 @@ body.noscroll {
 
     &__email {
       margin-bottom: 10px;
-      font-size: 36px;
+      font-size: 30px;
     }
 
     &__contact-list {

@@ -1,9 +1,9 @@
 // Бургер меню
 
-const hamb = document.querySelector("#hamb");
-const hambPopup = document.querySelector("#hamb__popup");
-const menu = document.querySelector("#hamb__menu").cloneNode(1);
-const body = document.body;
+const hamb = document.querySelector("#hamb"),
+  hambPopup = document.querySelector("#hamb__popup"),
+  menu = document.querySelector("#hamb__menu").cloneNode(1),
+  body = document.body;
 
 hamb.addEventListener("click", hambHandler);
 
@@ -17,7 +17,7 @@ function hambHandler(e) {
 
 function renderPopup() {
   hambPopup.appendChild(menu);
-};
+}
 
 // Закрытие меню при нажатии на ссылку
 
@@ -35,10 +35,12 @@ function closeOnClick() {
 
 // popup оставить заявку
 
-var openModals = document.querySelector('.hero__btn'),
-  modal = document.querySelector('.popup'),
-  overlay = document.querySelector('.overlay'),
-  close = document.querySelector('.popup__close');
+let openModals, modal, overlay, close, bodyPopup;
+
+openModals = document.querySelector('.hero__btn');
+modal = document.querySelector('.popup');
+overlay = document.querySelector('.overlay');
+close = document.querySelector('.popup__close');
 bodyPopup = document.body;
 
 openModals.addEventListener("click", popupOpen);
@@ -56,24 +58,6 @@ function popupClose(q) {
   overlay.classList.remove('open');
   bodyPopup.classList.remove('noscroll');
 }
-
-// openModal.onclick = function () {
-//   modal.classList.add('open');
-//   overlay.classList.add('open');
-//   bodyPopup.classList.add('noscroll');
-// }
-
-// close.onclick = function () {
-//   modal.classList.remove('open');
-//   overlay.classList.remove('open');
-//   bodyPopup.classList.remove('noscroll');
-// }
-
-// overlay.onclick = function () {
-//   modal.classList.remove('open');
-//   this.classList.remove('open');
-//   bodyPopup.classList.remove('noscroll');
-// }
 
 //Плавная прокрутка до нужной секции
 
@@ -131,19 +115,19 @@ $(function () {
   $("#accordion").accordion({
     active: false,
     heightStyle: "content",
-    collapsible: true,
+    collapsible: true
   });
 })
 
 // Табы
 
 $("#tabs").tabs({
-  show: { effect: "blind", duration: 800 },
-  hide: { effect: "blind", duration: 800 },
+  show: { effect: "blind", duration: 600 },
+  hide: { effect: "blind", duration: 400 },
   heightStyle: "content",
   collapsible: true,
   active: false,
-});
+})
 
 // Слайдер
 
@@ -164,7 +148,7 @@ $(function () {
     },
     ]
   });
-});
+})
 
 // Открыть модальном
 function openModal() {
@@ -180,7 +164,7 @@ function closeModal() {
   document.body.classList.remove('noscroll');
 }
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Вперед/назад контроль
@@ -195,10 +179,10 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("gallery__slides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
+  let i;
+  let slides = document.getElementsByClassName("gallery__slides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
   if (n > slides.length) { slideIndex = 1 }
   if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
