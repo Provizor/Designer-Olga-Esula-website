@@ -1383,7 +1383,7 @@ body.noscroll {
   .header .hamb {
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 4;
   }
 
   .hamb__field {
@@ -1392,7 +1392,7 @@ body.noscroll {
 
   .hamb__popup {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0px;
     right: -200%;
     display: flex;
