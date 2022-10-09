@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
-  <!-- Шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap"
@@ -62,8 +61,7 @@
           <div class="hero__left">
             <h1 class="hero__title">Создание сайтов</h1>
             <p class="hero__descr">Поможем эффективно заявить о себе и своём бизнесе в интернете</p>
-            <a id="popup__open" href="#" class="hero__btn popup__open">Заказать проект</a>
-            <a id="popup__open" href="#" class="hero__btn--anim popup__open">Заказать проект</a>
+            <a href="#" class="hero__btn popup__open">Заказать проект</a>
           </div>
           <div class="hero__prew">
             <div class="hero__slider">
@@ -136,37 +134,28 @@
               <img class="gallery__img" src="img/foto-5.jpg" alt="Ukvartira">
             </li>
           </ul>
-
           <div id="myModal" class="gallery__modal">
             <div class="gallery__modal-content">
               <span class="gallery__close cursor" onclick="closeModal()" tabindex="0">&#10006;</span>
-
               <div class="gallery__slides">
                 <img class="gallery__slide-img" src="img/present-1.jpg" onclick="currentSlide(1)">
               </div>
-
               <div class="gallery__slides">
                 <img class="gallery__slide-img" src="img/present-2.jpg" onclick="currentSlide(2)">
               </div>
-
               <div class="gallery__slides">
                 <img class="gallery__slide-img" src="img/present-3.png" onclick="currentSlide(3)">
               </div>
-
               <div class="gallery__slides">
                 <img class="gallery__slide-img" src="img/present-4.jpg" onclick="currentSlide(4)">
               </div>
-
               <div class="gallery__slides">
                 <img class="gallery__slide-img" src="img/present-5.jpg" onclick="currentSlide(5)">
               </div>
-
-              <!--   вперед = назад       -->
               <a class="gallery__prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="gallery__next" onclick="plusSlides(1)">&#10095;</a>
               <div class="gallery__prev-block" onclick="plusSlides(-1)"></div>
               <div class="gallery__next-block" onclick="plusSlides(1)"></div>
-              <!--   вперед = назад       -->
             </div>
             <div class="gallery__overlay" onclick="closeModal()">
             </div>
@@ -624,7 +613,6 @@
       </div>
     </section>
   </main>
-
   <footer id="footer" class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -687,10 +675,7 @@
       </div>
     </div>
   </footer>
-
-  <!-- всплывающие элементы -->
   <button class="btn scroll-top" title="Наверх"></button>
-
   <div class="popup">
     <h3 class="popup__title">Выберите тип сайта</h3>
     <ul class="popup__list-input">
@@ -717,15 +702,12 @@
     <form class="popup__form-email">
       <input class="popup__email" type="email" name="e-mail" placeholder="*@mail.ru">
       <button class="popup__btn">Отправить заявку</button>
-      <button class="popup__btn--anim">Отправить заявку</button>
     </form>
     <p class="popup__text">Или в удобное для вас время заполните бриф</p>
     <a class="popup__file" href="#" tabindex="0">Скачать бриф</a>
     <span id="popup__close" class="popup__close" tabindex="0">&#10006;</span>
   </div>
   <div class="overlay"></div>
-
-  <!-- всплывающие элементы -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="js/slick.min.js"></script>

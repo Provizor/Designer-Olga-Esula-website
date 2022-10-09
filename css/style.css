@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -241,10 +242,7 @@ body.noscroll {
 }
 
 .hero__btn {
-  position: absolute;
-  top: 298px;
-  right: 117px;
-  z-index: 2;
+  position: relative;
   padding: 17px 29px;
   background: #4046b2;
   border-radius: 12px;
@@ -254,28 +252,16 @@ body.noscroll {
   line-height: 22px;
   color: var(--white);
   cursor: pointer;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.hero__btn:hover {
-  opacity: 0;
-}
-
-.hero__btn:focus-visible {
-  outline: 2px solid var(--pink);
-}
-
-.hero__btn:active {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   opacity: 1;
-  background-color: var(--pink);
 }
 
-.hero__btn--anim {
+.hero__btn::before {
+  content: 'Заказать проект';
   position: absolute;
-  top: 298px;
-  right: 117px;
-  z-index: 1;
+  top: 0;
+  right: 0;
   padding: 17px 29px;
   background: -webkit-gradient(linear, left top, right top, from(#4046b2), color-stop(#dc23ab), to(#4046b2));
   background: linear-gradient(90deg, #4046b2, #dc23ab, #4046b2);
@@ -289,6 +275,25 @@ body.noscroll {
   cursor: pointer;
   -webkit-animation: 5s linear infinite alternate anim;
           animation: 5s linear infinite alternate anim;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.hero__btn:hover::before {
+  opacity: 1;
+}
+
+.hero__btn:focus-visible {
+  outline: 2px solid var(--pink);
+}
+
+.hero__btn:active {
+  background-color: var(--pink);
+}
+
+.hero__btn:active::before {
+  opacity: 0;
 }
 
 .hero__prew {
@@ -542,7 +547,7 @@ body.noscroll {
   position: fixed;
   z-index: 12;
   top: 46px;
-  right: 0px;
+  right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,7 +559,6 @@ body.noscroll {
           justify-content: center;
   width: 48px;
   height: 48px;
-  margin-right: 15px;
   padding: 16px;
   background-color: #000;
   border-radius: 50%;
@@ -624,7 +628,7 @@ body.noscroll {
 
 .gallery__next {
   margin-right: 15px;
-  right: 0;
+  right: 15px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -720,8 +724,7 @@ body.noscroll {
   padding: 16px 16px 34px;
 }
 
-.step__card-bottom,
-.step__card-top {
+.step__card-bottom, .step__card-top {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -807,16 +810,16 @@ body.noscroll {
   transition: .3s ease-in-out;
 }
 
-.step__card-link:hover::before {
+.step__card-link::before:hover {
   outline-color: var(--blue);
   outline-offset: 1px;
 }
 
-.step__card-link:active::before {
+.step__card-link::before:active {
   outline: 2px solid var(--blue);
 }
 
-.step__card-link:focus-visible::before {
+.step__card-link::before:focus-visible {
   outline: 1px solid var(--pink);
 }
 
@@ -868,8 +871,7 @@ body.noscroll {
   gap: 60px 48px;
 }
 
-.work__item-2,
-.work__item-4 {
+.work__item-2, .work__item-4 {
   position: relative;
 }
 
@@ -1036,12 +1038,12 @@ body.noscroll {
   color: var(--pink);
 }
 
-.footer__email:focus-visible {
-  color: var(--pink);
-}
-
 .footer__email:active {
   color: var(--lite-pink);
+}
+
+.footer__email:focus-visible {
+  color: var(--pink);
 }
 
 .footer__contact-list {
@@ -1058,11 +1060,6 @@ body.noscroll {
   gap: 24px;
 }
 
-.footer__contact-item path {
-  -webkit-transition: fill .3s ease-in-out;
-  transition: fill .3s ease-in-out;
-}
-
 .footer__contact-item:hover path {
   fill: var(--pink);
 }
@@ -1073,6 +1070,11 @@ body.noscroll {
 
 .footer__contact-item:focus-visible path {
   fill: var(--pink);
+}
+
+.footer__contact-item path {
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
 }
 
 .footer__copy-list {
@@ -1125,8 +1127,7 @@ body.noscroll {
   transition: .3s ease-in-out;
 }
 
-.scroll-top:hover,
-.scroll-top:hover::before {
+.scroll-top:hover, .scroll-top:hover::before {
   border-color: var(--pink);
   opacity: 1;
 }
@@ -1325,25 +1326,6 @@ body.noscroll {
 
 .popup__btn {
   position: relative;
-  z-index: 2;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.popup__btn:hover {
-  opacity: 0;
-}
-
-.popup__btn:focus-visible {
-  outline: 2px solid var(--pink);
-}
-
-.popup__btn:active {
-  opacity: 1;
-  background-color: var(--pink);
-}
-
-.popup__btn, .popup__btn--anim {
   width: 232px;
   padding: 13.5px;
   background-color: #4046b2;
@@ -1352,18 +1334,46 @@ body.noscroll {
   font-size: 14px;
   line-height: 17px;
   color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.popup__btn--anim {
+.popup__btn::before {
+  content: 'Отправить заявку';
   position: absolute;
-  bottom: 150px;
-  right: 32px;
-  z-index: 1;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 13.5px;
   background: -webkit-gradient(linear, left top, right top, from(#4046b2), color-stop(#dc23ab), to(#4046b2));
   background: linear-gradient(90deg, #4046b2, #dc23ab, #4046b2);
   background-size: 200%;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
   -webkit-animation: 5s linear infinite alternate anim;
   animation: 5s linear infinite alternate anim;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.popup__btn:hover::before {
+  opacity: 1;
+}
+
+.popup__btn:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 1px;
+}
+
+.popup__btn:active {
+  background-color: var(--pink);
+}
+
+.popup__btn:active::before {
+  opacity: 0;
 }
 
 .popup__text {
@@ -1441,39 +1451,6 @@ body.noscroll {
   background-color: var(--white);
   color: var(--blue);
   border: 1px solid var(--pink);
-}
-
-.popup__present {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transform: translatey(-50%) scale(0);
-          transform: translatey(-50%) scale(0);
-  -webkit-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
-}
-
-.popup__present.active {
-  -webkit-transform: translateY(0) scale(100%);
-          transform: translateY(0) scale(100%);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.popup__present img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vh;
-  height: 100vh;
-  padding: 15px 0;
-  -o-object-fit: contain;
-  object-fit: contain;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 @media (max-width: 1024px) {
@@ -1613,11 +1590,6 @@ body.noscroll {
   .hero__descr {
     margin-bottom: 64px;
   }
-  .hero__btn,
-  .hero__btn--anim {
-    top: 202px;
-    right: 155px;
-  }
   .hero__prew {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1626,12 +1598,12 @@ body.noscroll {
   .hero__slider {
     height: 258px;
   }
-  .slick-slide .hero__slide-img-1 {
-    display: none;
-  }
   .hero__slider-link {
     top: 250px;
     left: 0;
+  }
+  .slick-slide .hero__slide-img-1 {
+    display: none;
   }
   .hello {
     padding-top: 252px;
@@ -1669,9 +1641,6 @@ body.noscroll {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
     gap: 36px;
   }
   .step__item {
@@ -1705,9 +1674,8 @@ body.noscroll {
   .step__card-bottom {
     width: 100%;
   }
-  .step__card-bottom img,
   .step__card-list {
-    margin-bottom: 24px;
+    margin-bottom: 48px;
   }
   .step__text-tabs {
     padding: 0 35px 35px 35px;
@@ -1752,14 +1720,12 @@ body.noscroll {
   }
   .footer__contact {
     position: relative;
+    padding-left: 0;
   }
   .footer__contact-list {
     position: absolute;
     top: 77px;
     right: 0px;
-  }
-  .footer__contact {
-    padding-left: 0;
   }
   .footer__email {
     margin-right: 0;
@@ -1827,6 +1793,11 @@ body.noscroll {
   }
   .gallery__item-5 {
     grid-column: 1/-1;
+  }
+  .gallery__close {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
   }
   .step::after {
     top: 235px;
@@ -1939,10 +1910,6 @@ body.noscroll {
   .hero__descr {
     font-size: 20px;
   }
-  .hero__btn, .hero__btn--anim {
-    top: 155px;
-    right: 93px;
-  }
   .hello {
     padding-bottom: 0;
   }
@@ -2014,12 +1981,8 @@ body.noscroll {
     text-align: center;
     font-size: 14px;
   }
-  .popup__btn, .popup__btn--anim {
+  .popup__btn {
     width: 220px;
-  }
-  .popup__btn--anim {
-    bottom: 139px;
-    right: 20px;
   }
   .header {
     padding-top: 32px;
@@ -2051,10 +2014,14 @@ body.noscroll {
     font-size: 14px;
     line-height: 140%;
   }
-  .hero__btn, .hero__btn--anim {
-    top: 385px;
-    right: 0;
-    padding: 13.5px 81px;
+  .hero__btn {
+    padding: 14px 81px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .hero__btn::before {
+    padding: 14.5px 81px;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
@@ -2153,6 +2120,9 @@ body.noscroll {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  .step__item:nth-child(2) .step__card-top {
+    margin-bottom: 20px;
+  }
   .step__item::before, .step__item::after {
     content: '';
     position: absolute;
@@ -2225,9 +2195,8 @@ body.noscroll {
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
-  .step__card-bottom img,
   .step__card-list {
-    margin-bottom: 13.5px;
+    margin-bottom: 27px;
   }
   .work {
     padding-top: 48px;

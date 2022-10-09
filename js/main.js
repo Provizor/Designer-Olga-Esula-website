@@ -155,6 +155,7 @@ function openModal() {
   document.getElementById("myModal").classList.add('visible');
   document.querySelector(".gallery__overlay").classList.add('visible');
   document.body.classList.add('noscroll');
+  document.body.style.top = `-${window.scrollY}1200px`
 }
 
 // Закрыть модальное
@@ -162,6 +163,7 @@ function closeModal() {
   document.getElementById("myModal").classList.remove('visible');
   document.querySelector(".gallery__overlay").classList.remove('visible');
   document.body.classList.remove('noscroll');
+  window.scrollTo(0, parseInt(body.style.top || '0') * -1);
 }
 
 let slideIndex = 1;
