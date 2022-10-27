@@ -655,6 +655,8 @@ body.noscroll {
     margin-bottom: 64px;
   }
 
+
+
   &__list {
     margin-bottom: 48px;
     justify-content: space-between;
@@ -2071,6 +2073,10 @@ body.noscroll {
       margin-bottom: 24px;
     }
 
+    &__tabs-inner {
+      width: 100%;
+    }
+
     &__list {
       width: 100%;
       margin-bottom: 0;
@@ -2157,7 +2163,7 @@ body.noscroll {
     }
 
     &__text-tabs {
-      max-width: 260px;
+      max-width: 324px;
       width: 100%;
       padding: 17px;
       padding-top: 0;

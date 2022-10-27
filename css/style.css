@@ -2110,6 +2110,9 @@ body.noscroll {
   .step__title {
     margin-bottom: 24px;
   }
+  .step__tabs-inner {
+    width: 100%;
+  }
   .step__list {
     width: 100%;
     margin-bottom: 0;
@@ -2183,7 +2186,7 @@ body.noscroll {
     outline-offset: -1px;
   }
   .step__text-tabs {
-    max-width: 260px;
+    max-width: 324px;
     width: 100%;
     padding: 17px;
     padding-top: 0;
