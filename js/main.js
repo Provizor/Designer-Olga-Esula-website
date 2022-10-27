@@ -111,23 +111,27 @@ $(function () {
 
 // Аккордион
 
-$(function () {
-  $("#accordion").accordion({
-    active: false,
-    heightStyle: "content",
-    collapsible: true
-  });
-})
+if (window.matchMedia('(max-width: 1024px)').matches) {
+  $(function () {
+    $("#accordion").accordion({
+      active: false,
+      heightStyle: "content",
+      collapsible: true,
+    });
+  })
+}
 
 // Табы
 
-$("#tabs").tabs({
-  show: { effect: "blind", duration: 600 },
-  hide: { effect: "blind", duration: 400 },
-  heightStyle: "content",
-  collapsible: true,
-  active: false,
-})
+if (window.matchMedia("(min-width: 1024px)").matches) {
+  $("#tabs").tabs({
+    show: { effect: "blind", duration: 600 },
+    hide: { effect: "blind", duration: 400 },
+    heightStyle: "content",
+    collapsible: true,
+    active: false,
+  })
+}
 
 // Слайдер
 

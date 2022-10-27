@@ -117,7 +117,7 @@ body.noscroll {
 }
 
 .accordion {
-  display: none !important;
+  display: none;
 }
 
 .flex {
@@ -1458,10 +1458,10 @@ body.noscroll {
     padding: 0 94px;
   }
   .tabs {
-    display: none !important;
+    display: none;
   }
   .step__list .ui-accordion-content-active {
-    display: block !important;
+    display: block;
   }
   .title {
     font-weight: 600;

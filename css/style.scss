@@ -116,7 +116,7 @@ body.noscroll {
 }
 
 .accordion {
-  display: none !important;
+  display: none;
 }
 
 .flex {
@@ -1351,11 +1351,11 @@ body.noscroll {
   }
 
   .tabs {
-    display: none !important;
+    display: none;
   }
 
   .step__list .ui-accordion-content-active {
-    display: block !important;
+    display: block;
   }
 
   .title {
