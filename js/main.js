@@ -125,8 +125,8 @@ if (window.matchMedia('(max-width: 1024px)').matches) {
 
 if (window.matchMedia("(min-width: 1024px)").matches) {
   $("#tabs").tabs({
-    show: { effect: "blind", duration: 600 },
-    hide: { effect: "blind", duration: 400 },
+    show: { effect: "blind", duration: 500 },
+    hide: { effect: "blind", duration: 350 },
     heightStyle: "content",
     collapsible: true,
     active: false,
