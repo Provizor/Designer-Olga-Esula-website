@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Esula design</title>
+  <link rel="icon" href="img/favicon.svg">
+  <link rel="mask-icon" href="img/favicon.svg" color="#000000">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner flex">
+        <a href="#" class="header__logo">
+          <img src="img/logo.jpg" alt="Esaul design logo" class="header__logo-img">
+        </a>
+        <button class="hamb" aria-label="Скрытое меню">
+          <div id="hamb" class="hamb__field">
+            <span class="hamb__bar"></span>
+            <span class="hamb__bar"></span>
+            <span class="hamb__bar"></span>
+          </div>
+        </button>
+        <nav class="header__nav">
+          <ul id="hamb__menu" class="header__list flex">
+            <li class="header__item" tabindex="0">
+              <a href="#gallery" class="header__item-link">Проекты</a>
+            </li>
+            <li class="header__item" tabindex="0">
+              <a href="#step" class="header__item-link">Процесс работы</a>
+            </li>
+            <li class="header__item" tabindex="0">
+              <a href="#" class="header__item-link">Калькулятор</a>
+            </li>
+            <li class="header__item" tabindex="0">
+              <a href="#work" class="header__item-link">Команда</a>
+            </li>
+            <li class="header__item" tabindex="0">
+              <a href="#footer" class="header__item-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="hamb__popup" class="hamb__popup"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner flex">
+          <div class="hero__left">
+            <h1 class="hero__title">Создание сайтов</h1>
+            <p class="hero__descr">Поможем эффективно заявить о себе и своём бизнесе в интернете</p>
+            <a href="#" class="hero__btn popup__open">Заказать проект</a>
+          </div>
+          <div class="hero__prew">
+            <div class="hero__slider">
+              <div class="hero__slide-inner">
+                <img class="hero__slide hero__slide-img-1" src="img/slide-1-img-top.png" alt="">
+                <img class="hero__slide hero__slide-img-2" src="img/slide-1-img-bottom-1.png" alt="">
+                <img class="hero__slide hero__slide-img-3" src="img/slide-1-img-bottom-2.png" alt="">
+              </div>
+              <div class="hero__slide-inner">
+                <img class="hero__slide hero__slide-img-1" src="img/slide-2-img-top.png" alt="Ноутбук с изображением">
+                <img class="hero__slide hero__slide-img-2" src="img/slide-1-img-bottom-2.png" alt="">
+                <img class="hero__slide hero__slide-img-3" src="img/slide-2-img-bottom-2.png" alt="">
+              </div>
+              <div class="hero__slide-inner">
+                <img class="hero__slide hero__slide-img-1" src="img/slide-3-img-top.png" alt="Ноутбук с изображением">
+                <img class="hero__slide hero__slide-img-2" src="img/slide-2-img-bottom-2.png" alt="">
+                <img class="hero__slide hero__slide-img-3" src="img/slide-3-img-bottom-2.png" alt="">
+              </div>
+              <div class="hero__slide-inner">
+                <img class="hero__slide hero__slide-img-1" src="img/slide-4-img-top.png" alt="Ноутбук с изображением">
+                <img class="hero__slide hero__slide-img-2" src="img/slide-3-img-bottom-2.png" alt="">
+                <img class="hero__slide hero__slide-img-3" src="img/slide-4-img-bottom-2.png" alt="">
+              </div>
+              <div class="hero__slide-inner">
+                <img class="hero__slide hero__slide-img-1" src="img/slide-5-img-top.png" alt="Ноутбук с изображением">
+                <img class="hero__slide hero__slide-img-2" src="img/slide-4-img-bottom-2.png" alt="">
+                <img class="hero__slide hero__slide-img-3" src="img/slide-5-img-bottom-2.png" alt="">
+              </div>
+            </div>
+            <a class="hero__slider-link" href="#gallery" tabindex="0">Посмотреть проекты</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hello">
+      <div class="container">
+        <div class="hello__inner flex">
+          <div class="hello__prew">
+            <img src="img/hello__bg.jpg" alt="Ольга">
+          </div>
+          <div class="hello__content">
+            <h2 class="hello__title title">Привет!</h2>
+            <p class="hello__descr">
+              Меня зовут Ольга и я ui/ux дизайнер. Моя работа — создание удобных и красивых интерфейсов. Моя цель —
+              создавать «гуманные интерфейсы», повышать качество общения с помощью цифровых технологий.
+              <br>Каждый проект уникален, поэтому в работе не используются шаблоны или конструкторы.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="gallery__inner">
+          <h2 class="gallery__title title">Галерея проектов</h2>
+          <ul id="gallery__list" class="gallery__list">
+            <li class="gallery__item gallery__item-1" href="#" onclick="openModal();currentSlide(1)">
+              <img class="gallery__img" src="img/foto-1.jpg" alt="Aeroflot">
+            </li>
+            <li class="gallery__item gallery__item-2" href="#" onclick="openModal();currentSlide(2)">
+              <img class="gallery__img" src="img/foto-2.jpg" alt="Design conference">
+            </li>
+            <li class="gallery__item gallery__item-3" href="#" onclick="openModal();currentSlide(3)">
+              <img class="gallery__img" src="img/foto-3.jpg" alt="Royal owl works">
+            </li>
+            <li class="gallery__item gallery__item-4" href="#" onclick="openModal();currentSlide(4)">
+              <img class="gallery__img" src="img/foto-4.jpg" alt="Seven seeds">
+            </li>
+            <li class="gallery__item gallery__item-5" href="#" onclick="openModal();currentSlide(5)">
+              <img class="gallery__img" src="img/foto-5.jpg" alt="Ukvartira">
+            </li>
+          </ul>
+          <div id="myModal" class="gallery__modal">
+            <div class="gallery__modal-content">
+              <span class="gallery__close cursor" onclick="closeModal()" tabindex="0">&#10006;</span>
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-1.jpg" onclick="currentSlide(1)">
+              </div>
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-2.jpg" onclick="currentSlide(2)">
+              </div>
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-3.png" onclick="currentSlide(3)">
+              </div>
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-4.jpg" onclick="currentSlide(4)">
+              </div>
+              <div class="gallery__slides">
+                <img class="gallery__slide-img" src="img/present-5.jpg" onclick="currentSlide(5)">
+              </div>
+              <a class="gallery__prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="gallery__next" onclick="plusSlides(1)">&#10095;</a>
+              <div class="gallery__prev-block" onclick="plusSlides(-1)"></div>
+              <div class="gallery__next-block" onclick="plusSlides(1)"></div>
+            </div>
+            <div class="gallery__overlay" onclick="closeModal()">
+            </div>
+          </div>
+          <div>
+            <p class="gallery__descr">Посмотреть все проекты можно <a class="gallery__link"
+                href="https://www.behance.net/olgaesula" target="_blank">здесь</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="step" class="step">
+      <div class="container">
+        <div class="step__inner">
+          <h2 class="step__title title">Процесс работы</h2>
+          <div id="tabs" class="step__tabs-inner">
+            <ul id="accordion" class="step__list flex">
+              <li class="step__item">
+                <div class="step__card flex">
+                  <div class="step__card-top flex">
+                    <span class="step__card-number">1</span>
+                    <h3 class="step__card-title">Формулировка задачи</h3>
+                    <span class="step__card-arrow"></span>
+                  </div>
+                  <div class="step__card-bottom flex">
+                    <img src="img/card-download.svg" alt="Скачать" class="step__card-img">
+                    <a href="#tabs-1" class="step__card-link">Скачать бриф</a>
+                  </div>
+                </div>
+                <div class="step__text-tabs accordion">
+                  В удобное для вас время заполните подготовленный бриф.
+                </div>
+              </li>
+              <li class="step__item">
+                <div class="step__card flex">
+                  <div class="step__card-top flex">
+                    <span class="step__card-number">2</span>
+                    <h3 class="step__card-title">Заказ проекта</h3>
+                    <span class="step__card-arrow"></span>
+                  </div>
+                  <div class="step__card-bottom flex">
+                    <ul class="step__card-list flex">
+                      <li class="step__card-item">
+                        <img class="step__item-img" src="img/wa.svg" alt="WhatsApp">
+                      </li>
+                      <li class="step__card-item">
+                        <img class="step__item-img" src="img/viber.svg" alt="Viber">
+                      </li>
+                      <li class="step__card-item">
+                        <img class="step__item-img" src="img/telegram.svg" alt="Telegram">
+                      </li>
+                      <li class="step__card-item">
+                        <img class="step__item-img" src="img/mail.svg" alt="Mail">
+                      </li>
+                    </ul>
+                    <a href="#tabs-2" class="step__card-link" tabindex="0">Отправить данные</a>
+                  </div>
+                </div>
+                <div class="step__text-tabs accordion">
+                  Подготовьте всё необходимое для работы (брэнд-бук, иллюстрации, фото, текст для каждого блока) и
+                  отправьте
+                  удобным вам способом. Это и будет заявкой на проект.<br> В ответ вам будет прислано техническое
+                  задание
+                  для
+                  согласования, если оно уже есть - присылайте с брифом!
+                </div>
+              </li>
+              <li class="step__item">
+                <div class="step__card flex">
+                  <div class="step__card-top flex">
+                    <span class="step__card-number">3</span>
+                    <h3 class="step__card-title">Согласование стоимости</h3>
+                    <span class="step__card-arrow"></span>
+                  </div>
+                  <div class="step__card-bottom flex">
+                    <img src="img/mastercard.svg" alt="Карта оплаты" class="step__card-img">
+                    <a href="#tabs-3" class="step__card-link" tabindex="0">Внести предоплату</a>
+                  </div>
+                </div>
+                <div class="step__text-tabs accordion">
+                  По техническому заданию создается структура макета, на основании которой определяется стоимость
+                  проекта и
+                  сроки работы. После согласования вноситься предоплата (20% от стоимости.).
+                </div>
+              </li>
+              <li class="step__item">
+                <div class="step__card flex">
+                  <div class="step__card-top flex">
+                    <span class="step__card-number">4</span>
+                    <h3 class="step__card-title">Приёмка работы</h3>
+                    <span class="step__card-arrow"></span>
+                  </div>
+                  <div class="step__card-bottom flex">
+                    <img src="img/mastercard.svg" alt="Карта оплаты" class="step__card-img">
+                    <a href="#tabs-4" class="step__card-link" tabindex="0">Оплатить</a>
+                  </div>
+                </div>
+                <div class="step__text-tabs accordion">
+                  Вы получаете видео с демонстрацией анимации прототипа. Можно вносить правки, не выходящие за рамки
+                  технического задания.<br>По умолчанию создаются три адаптивные версии макета: desktop (1440px), iPad
+                  (744px),
+                  mobile (320px). <br>Проводится тестирование. <br>Прототип дорабатывается по вашим правкам, создаётся
+                  его
+                  презентация. После оплаты вы получаете ссылку на макеты.
+                </div>
+              </li>
+            </ul>
+            <div id="tabs-1" class="step__text-tabs tabs">
+              В удобное для вас время заполните подготовленный бриф.
+            </div>
+            <div id="tabs-2" class="step__text-tabs tabs">
+              Подготовьте всё необходимое для работы (брэнд-бук, иллюстрации, фото, текст для каждого блока) и
+              отправьте
+              удобным вам способом. Это и будет заявкой на проект.<br> В ответ вам будет прислано техническое
+              задание
+              для
+              согласования, если оно уже есть - присылайте с брифом!
+            </div>
+            <div id="tabs-3" class="step__text-tabs tabs">
+              По техническому заданию создается структура макета, на основании которой определяется стоимость
+              проекта и
+              сроки работы. После согласования вноситься предоплата (20% от стоимости.).
+            </div>
+            <div id="tabs-4" class="step__text-tabs tabs">
+              Вы получаете видео с демонстрацией анимации прототипа. Можно вносить правки, не выходящие за рамки
+              технического задания.<br>По умолчанию создаются три адаптивные версии макета: desktop (1440px), iPad
+              (744px),
+              mobile (320px). <br>Проводится тестирование. <br>Прототип дорабатывается по вашим правкам, создаётся
+              его
+              презентация. После оплаты вы получаете ссылку на макеты.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="work" class="work">
+      <div class="container">
+        <div class="work__inner">
+          <div class="work__top">
+            <h2 class="work__title title">Мы работаем вместе</h2>
+            <p class="work__descr">
+              Возможно вам понадобятся услуги других специалистов. Здесь указаны контакты ребят, с которыми я в одной
+              команде.
+            </p>
+          </div>
+          <div class="work__bottom">
+            <ul class="work__list">
+              <li class="work__item work__item-1">
+                <div class="work__card">
+                  <div class="work__card-prew">
+                    <picture>
+                      <source srcset="img/ivan.jpg" type="image/jpeg" media="(min-width: 421px)">
+                      <source srcset="img/ivan-420.jpg" type="image/jpeg" media="(max-width: 420px)">
+                      <img src="img/ivan.jpg" alt="Иван Вотинцев" class="work__card-img">
+                    </picture>
+                  </div>
+                  <div class="work__card-content">
+                    <h3 class="work__card-name">Иван Вотинцев</h3>
+                    <p class="work__card-descr">Web-разработчик (Frontend, WordPress)</p>
+                    <p class="work__card-text work__card-text--disable">Контраст и ритм в дизайне</p>
+                    <ul class="work__contact-list flex">
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17.0854 3.41006C16.164 2.48399 15.0665 1.74973 13.8569 1.25011C12.6473 0.750494 11.3499 0.49552 10.0402 0.50006C4.55276 0.50006 0.0804022 4.95006 0.0804022 10.4101C0.0804022 12.1601 0.542714 13.8601 1.40704 15.3601L0 20.5001L5.27638 19.1201C6.73367 19.9101 8.37186 20.3301 10.0402 20.3301C15.5276 20.3301 20 15.8801 20 10.4201C20 7.77006 18.9648 5.28006 17.0854 3.41006ZM10.0402 18.6501C8.55276 18.6501 7.09548 18.2501 5.81909 17.5001L5.51759 17.3201L2.38191 18.1401L3.21608 15.1001L3.01508 14.7901C2.18869 13.477 1.74989 11.9593 1.74874 10.4101C1.74874 5.87006 5.46734 2.17006 10.0301 2.17006C12.2412 2.17006 14.3216 3.03006 15.8794 4.59006C16.6507 5.35402 17.262 6.26272 17.6778 7.26348C18.0936 8.26425 18.3056 9.33717 18.3015 10.4201C18.3216 14.9601 14.603 18.6501 10.0402 18.6501ZM14.5829 12.4901C14.3317 12.3701 13.1055 11.7701 12.8844 11.6801C12.6533 11.6001 12.4925 11.5601 12.3216 11.8001C12.1508 12.0501 11.6784 12.6101 11.5377 12.7701C11.397 12.9401 11.2462 12.9601 10.995 12.8301C10.7437 12.7101 9.9397 12.4401 8.99497 11.6001C8.25126 10.9401 7.75879 10.1301 7.60804 9.88006C7.46734 9.63006 7.58794 9.50006 7.71859 9.37006C7.82914 9.26006 7.96985 9.08006 8.09045 8.94006C8.21105 8.80006 8.26131 8.69006 8.34171 8.53006C8.42211 8.36006 8.38191 8.22006 8.32161 8.10006C8.2613 7.98006 7.75879 6.76006 7.55779 6.26006C7.35678 5.78006 7.14573 5.84006 6.99497 5.83006H6.51256C6.34171 5.83006 6.0804 5.89006 5.84925 6.14006C5.62814 6.39006 4.98492 6.99006 4.98492 8.21006C4.98492 9.43006 5.8794 10.6101 6 10.7701C6.1206 10.9401 7.75879 13.4401 10.2513 14.5101C10.8442 14.7701 11.3065 14.9201 11.6683 15.0301C12.2613 15.2201 12.804 15.1901 13.2362 15.1301C13.7186 15.0601 14.7136 14.5301 14.9146 13.9501C15.1256 13.3701 15.1256 12.8801 15.0553 12.7701C14.9849 12.6601 14.8342 12.6101 14.5829 12.4901Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.75997 0C8.17817 0 4.26531 0.167331 2.18401 2.1753C0.685464 3.59761 0.102698 5.77291 0.0194457 8.36653C-0.147059 12.4661 0.768716 15.0598 2.26726 16.3984C2.60027 16.6494 3.43279 17.3187 5.01458 17.8207V19.9123C5.01458 19.9123 5.01458 20.749 5.5141 20.9163C5.59735 20.9163 5.6806 21 5.76385 21C6.26337 21 6.67963 20.4143 7.2624 19.8287C7.76191 19.243 8.17817 18.8247 8.42793 18.4064H10.2595C11.8413 18.4064 15.7541 18.239 17.8354 16.2311C19.334 14.7251 19.9167 12.5498 19.9167 9.78884C20 9.37052 20 8.86853 20 8.36653C19.9167 5.27092 19.001 3.17928 17.7522 2.00797C17.2527 1.58964 15.0881 0 10.426 0L9.75997 0ZM9.59346 1.58964H10.3427C14.7551 1.58964 16.4202 3.01195 16.5867 3.17928C17.5857 4.01594 18.1684 5.85657 18.2517 8.28287V8.61753C18.335 9.11952 18.335 9.53785 18.335 9.78884C18.2517 12.2988 17.7522 13.9721 16.7532 15.0598C15.0049 16.6494 11.3418 16.7331 10.3427 16.7331H8.76094L7.4289 18.239L6.59638 19.1594L6.42987 19.4104C6.26337 19.5777 6.01361 19.9123 5.84711 19.996V16.2311C4.18206 15.8127 3.51604 15.2271 3.34954 15.0598C2.18401 14.0558 1.51799 11.6295 1.68449 8.36653V7.52988C1.851 5.52191 2.35051 4.18327 3.18303 3.26295C4.93133 1.67331 8.59443 1.58964 9.59346 1.58964ZM9.51021 3.43028C9.09395 3.43028 9.09395 4.01594 9.51021 4.01594C12.5905 4.01594 15.2546 6.10757 15.2546 10.0398C15.2546 10.4582 15.8374 10.4582 15.8374 10.0398C15.8374 5.77291 13.0068 3.34661 9.51021 3.43028ZM6.21092 4.20418C6.02229 4.18146 5.83229 4.2337 5.68144 4.34976C4.84891 4.76809 4.01556 5.60641 4.26531 6.52673C4.26531 6.52673 4.43182 7.27888 5.34759 8.86853C5.84711 9.62151 6.26337 10.2908 6.67963 10.7928C7.09589 11.3785 7.76191 12.0478 8.42793 12.5498C9.75997 13.6374 11.8413 14.7251 12.757 14.9761C13.5896 15.2271 14.5053 14.3904 14.9216 13.5538C15.0881 13.2191 15.0049 12.8008 14.6719 12.5498C14.1723 12.0478 13.3398 11.4622 12.757 11.1275C12.3408 10.8765 11.8413 11.0438 11.6748 11.2948L11.2585 11.7968C11.092 12.0478 10.6757 12.0478 10.6757 12.0478C7.92841 11.2948 7.17914 8.4502 7.17914 8.4502C7.17914 8.4502 7.17914 8.11554 7.4289 7.86454L7.92842 7.44621C8.17817 7.27888 8.34468 6.77689 8.09492 6.35857C7.92841 6.10757 7.67866 5.60558 7.4289 5.35458C7.17914 5.01992 6.67963 4.43426 6.67963 4.43426C6.55332 4.30715 6.38833 4.22616 6.21092 4.20418ZM10.093 5.10359C9.67671 5.01992 9.59346 5.68924 10.0097 5.68924C12.3408 5.85657 13.6728 7.44621 13.5896 9.45418C13.5063 9.87251 14.1723 9.87251 14.1723 9.45418C14.2556 7.11155 12.757 5.18725 10.093 5.10359ZM10.3427 6.69323C9.92647 6.60956 9.92647 7.27888 10.3427 7.27888C11.3418 7.27888 11.8413 7.86454 11.8413 8.86853C11.9245 9.28685 12.5073 9.28685 12.5073 8.86853C12.424 7.52988 11.6748 6.69323 10.3427 6.69323Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10 18.5C12.1217 18.5 14.1566 17.6571 15.6569 16.1569C17.1571 14.6566 18 12.6217 18 10.5C18 8.37827 17.1571 6.34344 15.6569 4.84315C14.1566 3.34285 12.1217 2.5 10 2.5C7.87827 2.5 5.84344 3.34285 4.34315 4.84315C2.84285 6.34344 2 8.37827 2 10.5C2 12.6217 2.84285 14.6566 4.34315 16.1569C5.84344 17.6571 7.87827 18.5 10 18.5ZM10 20.5C4.477 20.5 0 16.023 0 10.5C0 4.977 4.477 0.5 10 0.5C15.523 0.5 20 4.977 20 10.5C20 16.023 15.523 20.5 10 20.5ZM6.89 11.67L4.392 10.891C3.852 10.726 3.849 10.354 4.513 10.087L14.246 6.327C14.811 6.097 15.131 6.388 14.948 7.117L13.291 14.937C13.175 15.494 12.84 15.627 12.375 15.37L9.824 13.482L8.635 14.63C8.513 14.748 8.414 14.849 8.226 14.874C8.039 14.9 7.885 14.844 7.772 14.534L6.902 11.663L6.89 11.671V11.67Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg class="mail" width="20" height="17" viewBox="0 0 20 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_687_27531)">
+                              <path d="M1.47729 1.625H18.5228V15.875H1.47729V1.625Z" stroke="#4046B2"
+                                stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M2.15906 2.375L9.99997 9.875L17.8409 2.375" stroke="#4046B2" stroke-width="2.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_687_27531">
+                                <rect width="20" height="17" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="work__item work__item-2">
+                <div class="work__card">
+                  <div class="work__card-prew">
+                    <picture>
+                      <source srcset="img/natalie.jpg" type="image/jpeg" media="(min-width: 421px)">
+                      <source srcset="img/natalie-420.jpg" type="image/jpeg" media="(max-width: 420px)">
+                      <img src="img/natalie.jpg" alt="Natalie" class="work__card-img">
+                    </picture>
+                  </div>
+                  <div class="work__card-content">
+                    <h3 class="work__card-name ">Natalie</h3>
+                    <p class="work__card-descr">Дизайнер</p>
+                    <p class="work__card-text">Life - is just a game</p>
+                    <ul class="work__contact-list flex">
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM6.89 11.17L4.392 10.391C3.852 10.226 3.849 9.854 4.513 9.587L14.246 5.827C14.811 5.597 15.131 5.888 14.948 6.617L13.291 14.437C13.175 14.994 12.84 15.127 12.375 14.87L9.824 12.982L8.635 14.13C8.513 14.248 8.414 14.349 8.226 14.374C8.039 14.4 7.885 14.344 7.772 14.034L6.902 11.163L6.89 11.171V11.17Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg class="mail" width="20" height="18" viewBox="0 0 20 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_687_27350)">
+                              <path d="M1.47729 2.125H18.5228V16.375H1.47729V2.125Z" stroke="#4046B2"
+                                stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M2.15906 2.875L9.99997 10.375L17.8409 2.875" stroke="#4046B2" stroke-width="2.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_687_27350">
+                                <rect width="20" height="17" fill="white" transform="translate(0 0.5)" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="work__item work__item-3">
+                <div class="work__card">
+                  <div class="work__card-prew">
+                    <picture>
+                      <source srcset="img/ctulhu.jpg" type="image/jpeg" media="(min-width: 421px)">
+                      <source srcset="img/ctulhu-420.jpg" type="image/jpeg" media="(max-width: 420px)">
+                      <img src="img/ctulhu.jpg" alt="ctulhu" class="work__card-img">
+                    </picture>
+                  </div>
+                  <div class="work__card-content">
+                    <h3 class="work__card-name">Simple Cthulhu Сity R'lyeh</h3>
+                    <ul class="work__contact-list flex">
+                      <li class="work__contact-item">
+                        <a href="" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17.0854 3.41006C16.164 2.48399 15.0665 1.74973 13.8569 1.25011C12.6473 0.750494 11.3499 0.49552 10.0402 0.50006C4.55276 0.50006 0.0804022 4.95006 0.0804022 10.4101C0.0804022 12.1601 0.542714 13.8601 1.40704 15.3601L0 20.5001L5.27638 19.1201C6.73367 19.9101 8.37186 20.3301 10.0402 20.3301C15.5276 20.3301 20 15.8801 20 10.4201C20 7.77006 18.9648 5.28006 17.0854 3.41006ZM10.0402 18.6501C8.55276 18.6501 7.09548 18.2501 5.81909 17.5001L5.51759 17.3201L2.38191 18.1401L3.21608 15.1001L3.01508 14.7901C2.18869 13.477 1.74989 11.9593 1.74874 10.4101C1.74874 5.87006 5.46734 2.17006 10.0301 2.17006C12.2412 2.17006 14.3216 3.03006 15.8794 4.59006C16.6507 5.35402 17.262 6.26272 17.6778 7.26348C18.0936 8.26425 18.3056 9.33717 18.3015 10.4201C18.3216 14.9601 14.603 18.6501 10.0402 18.6501ZM14.5829 12.4901C14.3317 12.3701 13.1055 11.7701 12.8844 11.6801C12.6533 11.6001 12.4925 11.5601 12.3216 11.8001C12.1508 12.0501 11.6784 12.6101 11.5377 12.7701C11.397 12.9401 11.2462 12.9601 10.995 12.8301C10.7437 12.7101 9.9397 12.4401 8.99497 11.6001C8.25126 10.9401 7.75879 10.1301 7.60804 9.88006C7.46734 9.63006 7.58794 9.50006 7.71859 9.37006C7.82914 9.26006 7.96985 9.08006 8.09045 8.94006C8.21105 8.80006 8.26131 8.69006 8.34171 8.53006C8.42211 8.36006 8.38191 8.22006 8.32161 8.10006C8.2613 7.98006 7.75879 6.76006 7.55779 6.26006C7.35678 5.78006 7.14573 5.84006 6.99497 5.83006H6.51256C6.34171 5.83006 6.0804 5.89006 5.84925 6.14006C5.62814 6.39006 4.98492 6.99006 4.98492 8.21006C4.98492 9.43006 5.8794 10.6101 6 10.7701C6.1206 10.9401 7.75879 13.4401 10.2513 14.5101C10.8442 14.7701 11.3065 14.9201 11.6683 15.0301C12.2613 15.2201 12.804 15.1901 13.2362 15.1301C13.7186 15.0601 14.7136 14.5301 14.9146 13.9501C15.1256 13.3701 15.1256 12.8801 15.0553 12.7701C14.9849 12.6601 14.8342 12.6101 14.5829 12.4901Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10 18.5C12.1217 18.5 14.1566 17.6571 15.6569 16.1569C17.1571 14.6566 18 12.6217 18 10.5C18 8.37827 17.1571 6.34344 15.6569 4.84315C14.1566 3.34285 12.1217 2.5 10 2.5C7.87827 2.5 5.84344 3.34285 4.34315 4.84315C2.84285 6.34344 2 8.37827 2 10.5C2 12.6217 2.84285 14.6566 4.34315 16.1569C5.84344 17.6571 7.87827 18.5 10 18.5ZM10 20.5C4.477 20.5 0 16.023 0 10.5C0 4.977 4.477 0.5 10 0.5C15.523 0.5 20 4.977 20 10.5C20 16.023 15.523 20.5 10 20.5ZM6.89 11.67L4.392 10.891C3.852 10.726 3.849 10.354 4.513 10.087L14.246 6.327C14.811 6.097 15.131 6.388 14.948 7.117L13.291 14.937C13.175 15.494 12.84 15.627 12.375 15.37L9.824 13.482L8.635 14.63C8.513 14.748 8.414 14.849 8.226 14.874C8.039 14.9 7.885 14.844 7.772 14.534L6.902 11.663L6.89 11.671V11.67Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="work__item work__item-4">
+                <div class="work__card">
+                  <div class="work__card-prew">
+                    <picture>
+                      <source srcset="img/vladimir.jpg" type="image/jpeg" media="(min-width: 421px)">
+                      <source srcset="img/vladimir-420.jpg" type="image/jpeg" media="(max-width: 420px)">
+                      <img src="img/vladimir.jpg" alt="Владимир Матасов" class="work__card-img">
+                    </picture>
+                  </div>
+                  <div class="work__card-content">
+                    <h3 class="work__card-name">Vladimir Matasov</h3>
+                    <p class="work__card-text">Контраст и ритм в дизайне</p>
+                    <ul class="work__contact-list flex">
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17.0854 3.41006C16.164 2.48399 15.0665 1.74973 13.8569 1.25011C12.6473 0.750494 11.3499 0.49552 10.0402 0.50006C4.55276 0.50006 0.0804022 4.95006 0.0804022 10.4101C0.0804022 12.1601 0.542714 13.8601 1.40704 15.3601L0 20.5001L5.27638 19.1201C6.73367 19.9101 8.37186 20.3301 10.0402 20.3301C15.5276 20.3301 20 15.8801 20 10.4201C20 7.77006 18.9648 5.28006 17.0854 3.41006ZM10.0402 18.6501C8.55276 18.6501 7.09548 18.2501 5.81909 17.5001L5.51759 17.3201L2.38191 18.1401L3.21608 15.1001L3.01508 14.7901C2.18869 13.477 1.74989 11.9593 1.74874 10.4101C1.74874 5.87006 5.46734 2.17006 10.0301 2.17006C12.2412 2.17006 14.3216 3.03006 15.8794 4.59006C16.6507 5.35402 17.262 6.26272 17.6778 7.26348C18.0936 8.26425 18.3056 9.33717 18.3015 10.4201C18.3216 14.9601 14.603 18.6501 10.0402 18.6501ZM14.5829 12.4901C14.3317 12.3701 13.1055 11.7701 12.8844 11.6801C12.6533 11.6001 12.4925 11.5601 12.3216 11.8001C12.1508 12.0501 11.6784 12.6101 11.5377 12.7701C11.397 12.9401 11.2462 12.9601 10.995 12.8301C10.7437 12.7101 9.9397 12.4401 8.99497 11.6001C8.25126 10.9401 7.75879 10.1301 7.60804 9.88006C7.46734 9.63006 7.58794 9.50006 7.71859 9.37006C7.82914 9.26006 7.96985 9.08006 8.09045 8.94006C8.21105 8.80006 8.26131 8.69006 8.34171 8.53006C8.42211 8.36006 8.38191 8.22006 8.32161 8.10006C8.2613 7.98006 7.75879 6.76006 7.55779 6.26006C7.35678 5.78006 7.14573 5.84006 6.99497 5.83006H6.51256C6.34171 5.83006 6.0804 5.89006 5.84925 6.14006C5.62814 6.39006 4.98492 6.99006 4.98492 8.21006C4.98492 9.43006 5.8794 10.6101 6 10.7701C6.1206 10.9401 7.75879 13.4401 10.2513 14.5101C10.8442 14.7701 11.3065 14.9201 11.6683 15.0301C12.2613 15.2201 12.804 15.1901 13.2362 15.1301C13.7186 15.0601 14.7136 14.5301 14.9146 13.9501C15.1256 13.3701 15.1256 12.8801 15.0553 12.7701C14.9849 12.6601 14.8342 12.6101 14.5829 12.4901Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.75997 0C8.17817 0 4.26531 0.167331 2.18401 2.1753C0.685464 3.59761 0.102698 5.77291 0.0194457 8.36653C-0.147059 12.4661 0.768716 15.0598 2.26726 16.3984C2.60027 16.6494 3.43279 17.3187 5.01458 17.8207V19.9123C5.01458 19.9123 5.01458 20.749 5.5141 20.9163C5.59735 20.9163 5.6806 21 5.76385 21C6.26337 21 6.67963 20.4143 7.2624 19.8287C7.76191 19.243 8.17817 18.8247 8.42793 18.4064H10.2595C11.8413 18.4064 15.7541 18.239 17.8354 16.2311C19.334 14.7251 19.9167 12.5498 19.9167 9.78884C20 9.37052 20 8.86853 20 8.36653C19.9167 5.27092 19.001 3.17928 17.7522 2.00797C17.2527 1.58964 15.0881 0 10.426 0L9.75997 0ZM9.59346 1.58964H10.3427C14.7551 1.58964 16.4202 3.01195 16.5867 3.17928C17.5857 4.01594 18.1684 5.85657 18.2517 8.28287V8.61753C18.335 9.11952 18.335 9.53785 18.335 9.78884C18.2517 12.2988 17.7522 13.9721 16.7532 15.0598C15.0049 16.6494 11.3418 16.7331 10.3427 16.7331H8.76094L7.4289 18.239L6.59638 19.1594L6.42987 19.4104C6.26337 19.5777 6.01361 19.9123 5.84711 19.996V16.2311C4.18206 15.8127 3.51604 15.2271 3.34954 15.0598C2.18401 14.0558 1.51799 11.6295 1.68449 8.36653V7.52988C1.851 5.52191 2.35051 4.18327 3.18303 3.26295C4.93133 1.67331 8.59443 1.58964 9.59346 1.58964ZM9.51021 3.43028C9.09395 3.43028 9.09395 4.01594 9.51021 4.01594C12.5905 4.01594 15.2546 6.10757 15.2546 10.0398C15.2546 10.4582 15.8374 10.4582 15.8374 10.0398C15.8374 5.77291 13.0068 3.34661 9.51021 3.43028ZM6.21092 4.20418C6.02229 4.18146 5.83229 4.2337 5.68144 4.34976C4.84891 4.76809 4.01556 5.60641 4.26531 6.52673C4.26531 6.52673 4.43182 7.27888 5.34759 8.86853C5.84711 9.62151 6.26337 10.2908 6.67963 10.7928C7.09589 11.3785 7.76191 12.0478 8.42793 12.5498C9.75997 13.6374 11.8413 14.7251 12.757 14.9761C13.5896 15.2271 14.5053 14.3904 14.9216 13.5538C15.0881 13.2191 15.0049 12.8008 14.6719 12.5498C14.1723 12.0478 13.3398 11.4622 12.757 11.1275C12.3408 10.8765 11.8413 11.0438 11.6748 11.2948L11.2585 11.7968C11.092 12.0478 10.6757 12.0478 10.6757 12.0478C7.92841 11.2948 7.17914 8.4502 7.17914 8.4502C7.17914 8.4502 7.17914 8.11554 7.4289 7.86454L7.92842 7.44621C8.17817 7.27888 8.34468 6.77689 8.09492 6.35857C7.92841 6.10757 7.67866 5.60558 7.4289 5.35458C7.17914 5.01992 6.67963 4.43426 6.67963 4.43426C6.55332 4.30715 6.38833 4.22616 6.21092 4.20418ZM10.093 5.10359C9.67671 5.01992 9.59346 5.68924 10.0097 5.68924C12.3408 5.85657 13.6728 7.44621 13.5896 9.45418C13.5063 9.87251 14.1723 9.87251 14.1723 9.45418C14.2556 7.11155 12.757 5.18725 10.093 5.10359ZM10.3427 6.69323C9.92647 6.60956 9.92647 7.27888 10.3427 7.27888C11.3418 7.27888 11.8413 7.86454 11.8413 8.86853C11.9245 9.28685 12.5073 9.28685 12.5073 8.86853C12.424 7.52988 11.6748 6.69323 10.3427 6.69323Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10 18.5C12.1217 18.5 14.1566 17.6571 15.6569 16.1569C17.1571 14.6566 18 12.6217 18 10.5C18 8.37827 17.1571 6.34344 15.6569 4.84315C14.1566 3.34285 12.1217 2.5 10 2.5C7.87827 2.5 5.84344 3.34285 4.34315 4.84315C2.84285 6.34344 2 8.37827 2 10.5C2 12.6217 2.84285 14.6566 4.34315 16.1569C5.84344 17.6571 7.87827 18.5 10 18.5ZM10 20.5C4.477 20.5 0 16.023 0 10.5C0 4.977 4.477 0.5 10 0.5C15.523 0.5 20 4.977 20 10.5C20 16.023 15.523 20.5 10 20.5ZM6.89 11.67L4.392 10.891C3.852 10.726 3.849 10.354 4.513 10.087L14.246 6.327C14.811 6.097 15.131 6.388 14.948 7.117L13.291 14.937C13.175 15.494 12.84 15.627 12.375 15.37L9.824 13.482L8.635 14.63C8.513 14.748 8.414 14.849 8.226 14.874C8.039 14.9 7.885 14.844 7.772 14.534L6.902 11.663L6.89 11.671V11.67Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg class="mail" width="20" height="17" viewBox="0 0 20 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_687_27531)">
+                              <path d="M1.47729 1.625H18.5228V15.875H1.47729V1.625Z" stroke="#4046B2"
+                                stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M2.15906 2.375L9.99997 9.875L17.8409 2.375" stroke="#4046B2" stroke-width="2.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_687_27531">
+                                <rect width="20" height="17" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="work__item work__item-5">
+                <div class="work__card">
+                  <div class="work__card-prew">
+                    <picture>
+                      <source srcset="img/denis.jpg" type="image/jpeg" media="(min-width: 421px)">
+                      <source srcset="img/denis-420.jpg" type="image/jpeg" media="(max-width: 420px)">
+                      <img src="img/denis.jpg" alt="Olenberg" class="work__card-img">
+                    </picture>
+                  </div>
+                  <div class="work__card-content">
+                    <h3 class="work__card-name">Денис</h3>
+                    <p class="work__card-descr">Web-разработчик</p>
+                    <ul class="work__contact-list flex">
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17.0854 3.41006C16.164 2.48399 15.0665 1.74973 13.8569 1.25011C12.6473 0.750494 11.3499 0.49552 10.0402 0.50006C4.55276 0.50006 0.0804022 4.95006 0.0804022 10.4101C0.0804022 12.1601 0.542714 13.8601 1.40704 15.3601L0 20.5001L5.27638 19.1201C6.73367 19.9101 8.37186 20.3301 10.0402 20.3301C15.5276 20.3301 20 15.8801 20 10.4201C20 7.77006 18.9648 5.28006 17.0854 3.41006ZM10.0402 18.6501C8.55276 18.6501 7.09548 18.2501 5.81909 17.5001L5.51759 17.3201L2.38191 18.1401L3.21608 15.1001L3.01508 14.7901C2.18869 13.477 1.74989 11.9593 1.74874 10.4101C1.74874 5.87006 5.46734 2.17006 10.0301 2.17006C12.2412 2.17006 14.3216 3.03006 15.8794 4.59006C16.6507 5.35402 17.262 6.26272 17.6778 7.26348C18.0936 8.26425 18.3056 9.33717 18.3015 10.4201C18.3216 14.9601 14.603 18.6501 10.0402 18.6501ZM14.5829 12.4901C14.3317 12.3701 13.1055 11.7701 12.8844 11.6801C12.6533 11.6001 12.4925 11.5601 12.3216 11.8001C12.1508 12.0501 11.6784 12.6101 11.5377 12.7701C11.397 12.9401 11.2462 12.9601 10.995 12.8301C10.7437 12.7101 9.9397 12.4401 8.99497 11.6001C8.25126 10.9401 7.75879 10.1301 7.60804 9.88006C7.46734 9.63006 7.58794 9.50006 7.71859 9.37006C7.82914 9.26006 7.96985 9.08006 8.09045 8.94006C8.21105 8.80006 8.26131 8.69006 8.34171 8.53006C8.42211 8.36006 8.38191 8.22006 8.32161 8.10006C8.2613 7.98006 7.75879 6.76006 7.55779 6.26006C7.35678 5.78006 7.14573 5.84006 6.99497 5.83006H6.51256C6.34171 5.83006 6.0804 5.89006 5.84925 6.14006C5.62814 6.39006 4.98492 6.99006 4.98492 8.21006C4.98492 9.43006 5.8794 10.6101 6 10.7701C6.1206 10.9401 7.75879 13.4401 10.2513 14.5101C10.8442 14.7701 11.3065 14.9201 11.6683 15.0301C12.2613 15.2201 12.804 15.1901 13.2362 15.1301C13.7186 15.0601 14.7136 14.5301 14.9146 13.9501C15.1256 13.3701 15.1256 12.8801 15.0553 12.7701C14.9849 12.6601 14.8342 12.6101 14.5829 12.4901Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10 18.5C12.1217 18.5 14.1566 17.6571 15.6569 16.1569C17.1571 14.6566 18 12.6217 18 10.5C18 8.37827 17.1571 6.34344 15.6569 4.84315C14.1566 3.34285 12.1217 2.5 10 2.5C7.87827 2.5 5.84344 3.34285 4.34315 4.84315C2.84285 6.34344 2 8.37827 2 10.5C2 12.6217 2.84285 14.6566 4.34315 16.1569C5.84344 17.6571 7.87827 18.5 10 18.5ZM10 20.5C4.477 20.5 0 16.023 0 10.5C0 4.977 4.477 0.5 10 0.5C15.523 0.5 20 4.977 20 10.5C20 16.023 15.523 20.5 10 20.5ZM6.89 11.67L4.392 10.891C3.852 10.726 3.849 10.354 4.513 10.087L14.246 6.327C14.811 6.097 15.131 6.388 14.948 7.117L13.291 14.937C13.175 15.494 12.84 15.627 12.375 15.37L9.824 13.482L8.635 14.63C8.513 14.748 8.414 14.849 8.226 14.874C8.039 14.9 7.885 14.844 7.772 14.534L6.902 11.663L6.89 11.671V11.67Z"
+                              fill="#4046B2" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="work__contact-item">
+                        <a href="#" class="work__contact-link">
+                          <svg class="mail" width="20" height="17" viewBox="0 0 20 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_687_27531)">
+                              <path d="M1.47729 1.625H18.5228V15.875H1.47729V1.625Z" stroke="#4046B2"
+                                stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M2.15906 2.375L9.99997 9.875L17.8409 2.375" stroke="#4046B2" stroke-width="2.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_687_27531">
+                                <rect width="20" height="17" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="work__item work__item-6">
+                <div class="work__card">
+                  <div class="work__card-prew">
+                    <picture>
+                      <source srcset="img/creator.jpg" type="image/jpeg" media="(min-width: 421px)">
+                      <source srcset="img/creator-420.jpg" type="image/jpeg" media="(max-width: 420px)">
+                      <img src="img/creator.jpg" alt="Разработчик" class="work__card-img">
+                    </picture>
+                  </div>
+                  <div class="work__card-content">
+                    <h3 class="work__card-name">ℰℬ-Ϸ&alpha;ӡ&rho;&alpha;&delta;&sigma;&tau;ɥ&mu;ӄ</h3>
+                    <p class="work__card-descr">Веб-разработчик</p>
+                    <p class="work__card-text work__card-text--disable">Узнаваемость логотипа</p>
+                    <ul class="work__contact-list flex">
+                      <li class="work__contact-item">
+                        <a href="" class="work__contact-link">
+                          <svg class="mail" width="20" height="17" viewBox="0 0 20 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_687_27531)">
+                              <path d="M1.47729 1.625H18.5228V15.875H1.47729V1.625Z" stroke="#4046B2"
+                                stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M2.15906 2.375L9.99997 9.875L17.8409 2.375" stroke="#4046B2" stroke-width="2.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_687_27531">
+                                <rect width="20" height="17" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <nav class="footer__nav">
+          <ul class="footer__list flex">
+            <li class="footer__item" tabindex="0">
+              <a href="#gallery" class="footer__link">
+                Проекты
+              </a>
+            </li>
+            <li class="footer__item" tabindex="0">
+              <a href="#step" class="footer__link">
+                Процесс&nbsp;работы
+              </a>
+            </li>
+            <li class="footer__item" tabindex="0">
+              <a href="#" class="footer__link">
+                Калькулятор
+              </a>
+            </li>
+            <li class="footer__item" tabindex="0">
+              <a href="#work" class="footer__link">
+                Команда
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__contact flex">
+          <a class="footer__email" href="mailto:esulaolga@gmail.com">esulaolga@gmail.com</a>
+          <ul class="footer__contact-list">
+            <li class="footer__contact-item" tabindex="0">
+              <a href="#" class="footer__contact-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM6.89 11.17L4.392 10.391C3.852 10.226 3.849 9.854 4.513 9.587L14.246 5.827C14.811 5.597 15.131 5.888 14.948 6.617L13.291 14.437C13.175 14.994 12.84 15.127 12.375 14.87L9.824 12.982L8.635 14.13C8.513 14.248 8.414 14.349 8.226 14.374C8.039 14.4 7.885 14.344 7.772 14.034L6.902 11.163L6.89 11.171V11.17Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__contact-item" tabindex="0">
+              <a href="#" class="footer__contact-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.0854 2.91006C16.164 1.98399 15.0665 1.24973 13.8569 0.750111C12.6473 0.250494 11.3499 -0.00448012 10.0402 5.95696e-05C4.55276 5.95696e-05 0.0804022 4.45006 0.0804022 9.91006C0.0804022 11.6601 0.542714 13.3601 1.40704 14.8601L0 20.0001L5.27638 18.6201C6.73367 19.4101 8.37186 19.8301 10.0402 19.8301C15.5276 19.8301 20 15.3801 20 9.92006C20 7.27006 18.9648 4.78006 17.0854 2.91006ZM10.0402 18.1501C8.55276 18.1501 7.09548 17.7501 5.81909 17.0001L5.51759 16.8201L2.38191 17.6401L3.21608 14.6001L3.01508 14.2901C2.18869 12.977 1.74989 11.4593 1.74874 9.91006C1.74874 5.37006 5.46734 1.67006 10.0301 1.67006C12.2412 1.67006 14.3216 2.53006 15.8794 4.09006C16.6507 4.85402 17.262 5.76272 17.6778 6.76348C18.0936 7.76425 18.3056 8.83717 18.3015 9.92006C18.3216 14.4601 14.603 18.1501 10.0402 18.1501ZM14.5829 11.9901C14.3317 11.8701 13.1055 11.2701 12.8844 11.1801C12.6533 11.1001 12.4925 11.0601 12.3216 11.3001C12.1508 11.5501 11.6784 12.1101 11.5377 12.2701C11.397 12.4401 11.2462 12.4601 10.995 12.3301C10.7437 12.2101 9.9397 11.9401 8.99497 11.1001C8.25126 10.4401 7.75879 9.63006 7.60804 9.38006C7.46734 9.13006 7.58794 9.00006 7.71859 8.87006C7.82914 8.76006 7.96985 8.58006 8.09045 8.44006C8.21105 8.30006 8.26131 8.19006 8.34171 8.03006C8.42211 7.86006 8.38191 7.72006 8.32161 7.60006C8.2613 7.48006 7.75879 6.26006 7.55779 5.76006C7.35678 5.28006 7.14573 5.34006 6.99497 5.33006H6.51256C6.34171 5.33006 6.0804 5.39006 5.84925 5.64006C5.62814 5.89006 4.98492 6.49006 4.98492 7.71006C4.98492 8.93006 5.8794 10.1101 6 10.2701C6.1206 10.4401 7.75879 12.9401 10.2513 14.0101C10.8442 14.2701 11.3065 14.4201 11.6683 14.5301C12.2613 14.7201 12.804 14.6901 13.2362 14.6301C13.7186 14.5601 14.7136 14.0301 14.9146 13.4501C15.1256 12.8701 15.1256 12.3801 15.0553 12.2701C14.9849 12.1601 14.8342 12.1101 14.5829 11.9901Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer__copy-list flex">
+          <li class="footer__copy-item">&copy;&nbsp;2022, Esula Design</li>
+          <li class="footer__copy-item">
+            <a href="#" class="footer__copy-link">Конфиденциальность</a>
+          </li>
+          <li class="footer__copy-item">
+            <a href="#" class="footer__copy-link">Пользовательское соглашение</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <button class="btn scroll-top" title="Наверх"></button>
+  <div class="popup">
+    <h3 class="popup__title">Выберите тип сайта</h3>
+    <ul class="popup__list-input">
+      <li class="popup__item-input">
+        <label class="popup__radio">
+          <input class="popup__input" type="radio" name="Сайт" value="Лэндинг">
+          <span class="popup__check" tabindex="0">Лэндинг</span>
+        </label>
+      </li>
+      <li class="popup__item-input">
+        <label class="popup__radio">
+          <input class="popup__input" type="radio" name="Сайт" value="Многостраничный сайт">
+          <span class="popup__check" tabindex="0">Многостраничный сайт</span>
+        </label>
+      </li>
+      <li class="popup__item-input">
+        <label class="popup__radio">
+          <input class="popup__input" type="radio" name="Сайт" value="Интернет-магазин">
+          <span class="popup__check" tabindex="0">Интернет-магазин</span>
+        </label>
+      </li>
+    </ul>
+    <h3 class="popup__title">Ваша почта для связи</h3>
+    <form class="popup__form-email">
+      <input class="popup__email" type="email" name="e-mail" placeholder="*@mail.ru">
+      <button class="popup__btn">Отправить заявку</button>
+    </form>
+    <p class="popup__text">Или в удобное для вас время заполните бриф</p>
+    <a class="popup__file" href="#" tabindex="0">Скачать бриф</a>
+    <span id="popup__close" class="popup__close" tabindex="0">&#10006;</span>
+  </div>
+  <div class="overlay"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
