@@ -31,18 +31,22 @@ function closeOnClick() {
   hambPopup.classList.remove("open");
   hamb.classList.remove("active");
   body.classList.remove("noscroll");
+  document.body.style.top = `-${window.scrollY}0px`;
+
 }
 
 // popup оставить заявку
 
-let openModals, modal, overlay, close, bodyPopup;
+let openModals, getOrder, modal, overlay, close, bodyPopup;
 
 openModals = document.querySelector('.hero__btn');
 modal = document.querySelector('.popup');
 overlay = document.querySelector('.overlay');
 close = document.querySelector('.popup__close');
 bodyPopup = document.body;
+getOrder = document.querySelector('.prices__btn');
 
+getOrder.addEventListener("click", popupOpen)
 openModals.addEventListener("click", popupOpen);
 close.addEventListener("click", popupClose);
 overlay.addEventListener("click", popupClose);
@@ -51,6 +55,7 @@ function popupOpen(q) {
   modal.classList.add('open');
   overlay.classList.add('open');
   bodyPopup.classList.add('noscroll');
+  document.body.style.top = `-${window.scrollY}0px`;
 }
 
 function popupClose(q) {
@@ -159,7 +164,7 @@ function openModal() {
   document.getElementById("myModal").classList.add('visible');
   document.querySelector(".gallery__overlay").classList.add('visible');
   document.body.classList.add('noscroll');
-  document.body.style.top = `-${window.scrollY}1200px`
+  document.body.style.top = `-${window.scrollY}1200px`;
 }
 
 // Закрыть модальное

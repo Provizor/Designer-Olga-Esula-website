@@ -526,30 +526,55 @@ body.noscroll {
     justify-content: center;
     width: 48px;
     height: 48px;
-    // margin-right: 15px;
     padding: 16px;
     background-color: #000;
     border-radius: 50%;
-    font-size: 22px;
-    font-weight: 400;
-    color: #fff;
     cursor: pointer;
     transition: .1s ease-in-out;
 
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
     &:hover {
-      color: var(--pink);
       background-color: var(--white);
+
+      &::before,
+      &::after {
+        background: var(--pink);
+      }
     }
 
     &:focus-visible {
-      color: var(--blue);
       background-color: var(--white);
       outline: 1px solid var(--pink);
+
+      &::before,
+      &::after {
+        background: var(--blue);
+      }
     }
 
     &:active {
-      color: #fff;
       background-color: var(--pink);
+
+      &::before,
+      &::after {
+        background: var(--white);
+      }
     }
   }
 
@@ -788,6 +813,165 @@ body.noscroll {
 
 .ui-state-active.step__item {
   outline: 2px solid var(--blue);
+}
+
+.prices {
+  padding: 80px 0;
+  background-color: var(--beige);
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__descr {
+    margin-bottom: 48px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--black);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    max-width: 1104px;
+    gap: 48px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    padding: 64px 96px;
+    background-color: var(--white);
+  }
+
+  &__item {
+    max-width: 336px;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    border: 2px solid var(--blue);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__card-top,
+  &__card__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__card-top {
+    padding: 12px 16px;
+  }
+
+  &__card-title {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--black);
+  }
+
+  &__card-descr {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    span {
+      color: #4046B2;
+    }
+  }
+
+  &__card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 12px 14px 12px;
+    box-shadow: inset 0px 1px 0px #DDDFE0;
+  }
+
+  &__card-day {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--black);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 48px;
+      left: calc(50% - 48px/2);
+      top: 28px;
+      background-color: #DC23AB;
+      border: 1px solid #DC23AB;
+    }
+  }
+
+  &__card-cost {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--black);
+  }
+
+  &__btn {
+    position: relative;
+    padding: 18px 30px;
+    background: #4046b2;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    opacity: 1;
+
+    &::before {
+      content: 'Заказать проект';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 18px 30px;
+      background: linear-gradient(90deg, #4046b2, #dc23ab, #4046b2);
+      background-size: 200%;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--white);
+      cursor: pointer;
+      animation: 5s linear infinite alternate anim;
+      transition: .3s ease-in-out;
+      opacity: 0;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--pink)
+    }
+
+    &:active {
+      background-color: var(--pink)
+    }
+
+    &:active::before {
+      opacity: 0;
+    }
+  }
 }
 
 .work {
@@ -1287,7 +1471,7 @@ body.noscroll {
   &__file {
     max-width: 232px;
     width: 100%;
-    padding-left: 49px;
+    padding-left: 42px;
     text-decoration: underline;
     font-weight: 600;
     font-size: 18px;
@@ -1323,26 +1507,53 @@ body.noscroll {
     height: 48px;
     background-color: #4046b2;
     border-radius: 50%;
-    color: #fff;
-    font-size: 22px;
     cursor: pointer;
     transition: .1s ease-in-out;
 
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
     &:hover {
       background-color: var(--white);
-      color: var(--pink);
       border: 1px solid var(--blue);
+
+      &::before,
+      &::after {
+        background-color: var(--pink);
+      }
     }
 
     &:active {
       background-color: var(--pink);
-      color: #fff;
+
+      &::before,
+      &::after {
+        background-color: var(--white);
+      }
     }
 
     &:focus-visible {
       background-color: var(--white);
-      color: var(--blue);
       border: 1px solid var(--pink);
+
+      &::before,
+      &::after {
+        background-color: var(--blue);
+      }
     }
   }
 }
@@ -1490,6 +1701,10 @@ body.noscroll {
       top: 250px;
       left: 0;
     }
+
+    &__slide-img-2 {
+      padding-left: 0;
+    }
   }
 
   .slick-slide .hero__slide-img-1 {
@@ -1511,6 +1726,25 @@ body.noscroll {
 
     &__descr {
       text-align: center;
+    }
+  }
+
+  .prices {
+    &__title {
+      text-align: center;
+    }
+
+    &__descr {
+      text-align: center;
+    }
+
+    &__center-btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__list {
+      padding: 64px 35px;
     }
   }
 
@@ -1712,6 +1946,26 @@ body.noscroll {
     }
   }
 
+  .prices {
+    &__list {
+      flex-wrap: wrap;
+      gap: 24px 16px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    &__item {
+      max-width: 244px;
+      width: 100%;
+
+      &:nth-child(2n) {
+        order: 1;
+        max-width: 296px;
+        width: 100%;
+      }
+    }
+  }
+
   .step {
     &::after {
       top: 235px;
@@ -1813,6 +2067,19 @@ body.noscroll {
       display: flex;
       flex-direction: row;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+
+  .prices {
+    &__item {
+      max-width: 287px;
+
+      &:nth-child(2n) {
+        max-width: 287px;
+      }
     }
   }
 }
@@ -1955,20 +2222,20 @@ body.noscroll {
     }
 
     &__descr {
-      margin-bottom: 287px;
+      margin-bottom: 290px;
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
     }
 
     &__btn {
-      padding: 14px 81px;
+      padding: 14px 70px;
       font-weight: 700;
       font-size: 14px;
       line-height: 17px;
 
       &::before {
-        padding: 14.5px 81px;
+        padding: 14.5px 70px;
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
@@ -1977,10 +2244,10 @@ body.noscroll {
 
     &__prew {
       position: absolute;
-      top: 118px;
-      width: 271px;
-      height: 171px;
-      background: url(../img/hero-bg-320.png) center center / 100% no-repeat;
+      top: 80px;
+      width: 270px;
+      height: 270px;
+      background: url(../img/hero-bg-320.png) center center / contain no-repeat;
     }
 
     &__slider {
@@ -1989,8 +2256,8 @@ body.noscroll {
 
     &__slider-link {
       position: absolute;
-      top: 194px;
-      left: 28px;
+      top: 255px;
+      left: 35px;
     }
   }
 
@@ -2007,7 +2274,8 @@ body.noscroll {
     }
 
     &__content {
-      width: 288px;
+      max-width: 363px;
+      width: 100%;
     }
 
     &__title {
@@ -2037,6 +2305,19 @@ body.noscroll {
 
     &__item {
       filter: none;
+
+      img {
+        &:hover {
+          outline: none;
+        }
+
+        &:active {
+          outline: none;
+        }
+        &:focus-visible {
+          outline: none;
+        }
+      }
     }
 
     &__descr {
@@ -2044,6 +2325,10 @@ body.noscroll {
       font-size: 14px;
       line-height: 140%;
     }
+  }
+
+  .draggable {
+    margin-bottom: 4px;
   }
 
   .slick-dots {
@@ -2059,6 +2344,65 @@ body.noscroll {
     height: 4px;
     background-color: #4046B2;
     border-radius: 3px
+  }
+
+  .prices {
+    padding: 48px 0;
+
+    &__title {
+      margin-bottom: 20px;
+      text-align: start;
+    }
+
+    &__descr {
+      margin-bottom: 20px;
+      text-align: start;
+      font-size: 14px;
+    }
+
+    &__list {
+      margin-bottom: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      background-color: var(--beige);
+    }
+
+    &__item {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: var(--white);
+
+      &:nth-child(2n) {
+        order: 0;
+      }
+    }
+
+    &__card-top {
+      padding: 12px;
+    }
+
+    &__card-title {
+      margin-bottom: 4px;
+      font-size: 20px;
+    }
+
+    &__card-bottom {
+      padding: 12px;
+    }
+
+    &__btn {
+      padding: 14px 70px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+
+      &::before {
+        padding: 14.5px 70px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
   }
 
   .step {
@@ -2264,7 +2608,7 @@ body.noscroll {
     &__email {
       margin-bottom: 32px;
       text-align: center;
-      font-size: 24px;
+      font-size: 23px;
       line-height: 29px;
     }
 

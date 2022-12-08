@@ -40,7 +40,7 @@
               <a href="#step" class="header__item-link">Процесс работы</a>
             </li>
             <li class="header__item" tabindex="0">
-              <a href="#" class="header__item-link">Калькулятор</a>
+              <a href="#prices" class="header__item-link">Цена</a>
             </li>
             <li class="header__item" tabindex="0">
               <a href="#work" class="header__item-link">Команда</a>
@@ -61,7 +61,7 @@
           <div class="hero__left">
             <h1 class="hero__title">Создание сайтов</h1>
             <p class="hero__descr">Поможем эффективно заявить о себе и своём бизнесе в интернете</p>
-            <a href="#" class="hero__btn popup__open">Заказать проект</a>
+            <button href="#" class="hero__btn popup__open">Заказать проект</button>
           </div>
           <div class="hero__prew">
             <div class="hero__slider">
@@ -136,7 +136,7 @@
           </ul>
           <div id="myModal" class="gallery__modal">
             <div class="gallery__modal-content">
-              <span class="gallery__close cursor" onclick="closeModal()" tabindex="0">&#10006;</span>
+              <span class="gallery__close cursor" onclick="closeModal()" tabindex="0"></span>
               <div class="gallery__slides">
                 <img class="gallery__slide-img" src="img/present-1.jpg" onclick="currentSlide(1)">
               </div>
@@ -289,6 +289,58 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section id="prices" class="prices">
+      <div class="container">
+        <div class="prices__inner">
+          <h2 class="prices__title title">Цена</h2>
+          <p class="prices__descr">Информация на сайте не является публичной офертой </p>
+        </div>
+      </div>
+      <ul class="prices__list">
+        <li class="prices__item">
+          <div class="prices__card">
+            <div class="prices__card-top">
+              <h3 class="prices__card-title">Лендинг</h3>
+              <p class="prices__card-descr"><span>9-13</span> блоков</p>
+            </div>
+            <div class="prices__card-bottom">
+              <spna class="prices__card-day">7 дней</spna>
+              <span class="prices__card-cost">8 000 ₽</span>
+            </div>
+          </div>
+        </li>
+        <li class="prices__item">
+          <div class="prices__card">
+            <div class="prices__card-top">
+              <h3 class="prices__card-title">Многостраничный сайт</h3>
+              <p class="prices__card-descr"><span>6</span> страниц</p>
+            </div>
+            <div class="prices__card-bottom">
+              <spna class="prices__card-day">12 дней</spna>
+              <span class="prices__card-cost">14 000 ₽</span>
+            </div>
+          </div>
+        </li>
+        <li class="prices__item">
+          <div class="prices__card">
+            <div class="prices__card-top">
+              <h3 class="prices__card-title">Оформление соцсетей</h3>
+            </div>
+            <div class="prices__card-bottom">
+              <spna class="prices__card-day">4 дня</spna>
+              <span class="prices__card-cost">5 000 ₽</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="container">
+        <div class="prices__inner prices__center-btn">
+          <button class="prices__btn popup__open">Заказать проект</button>
+        </div>
+      </div>
+      </div>
       </div>
     </section>
     <section id="work" class="work">
@@ -530,7 +582,7 @@
                     <p class="work__card-descr">Web-разработчик</p>
                     <ul class="work__contact-list flex">
                       <li class="work__contact-item">
-                        <a href="#" class="work__contact-link">
+                        <a class="work__contact-link" href="https://wa.me/79110353431" target="_blank">
                           <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -540,7 +592,7 @@
                         </a>
                       </li>
                       <li class="work__contact-item">
-                        <a href="#" class="work__contact-link">
+                        <a class="work__contact-link" href="https://t.me/Auto_Sender" target="_blank">
                           <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -550,7 +602,7 @@
                         </a>
                       </li>
                       <li class="work__contact-item">
-                        <a href="#" class="work__contact-link">
+                        <a class="work__contact-link" href="mailto:denisandreevich07@yandex.ru" target="_blank">
                           <svg class="mail" width="20" height="17" viewBox="0 0 20 17" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_687_27531)">
@@ -629,8 +681,8 @@
               </a>
             </li>
             <li class="footer__item" tabindex="0">
-              <a href="#" class="footer__link">
-                Калькулятор
+              <a href="#prices" class="footer__link">
+                Цена
               </a>
             </li>
             <li class="footer__item" tabindex="0">
@@ -681,7 +733,7 @@
     <ul class="popup__list-input">
       <li class="popup__item-input">
         <label class="popup__radio">
-          <input class="popup__input" type="radio" name="Сайт" value="Лэндинг">
+          <input class="popup__input" type="radio" name="Сайт" value="Лэндинг" checked>
           <span class="popup__check" tabindex="0">Лэндинг</span>
         </label>
       </li>
@@ -705,11 +757,12 @@
     </form>
     <p class="popup__text">Или в удобное для вас время заполните бриф</p>
     <a class="popup__file" href="#" tabindex="0">Скачать бриф</a>
-    <span id="popup__close" class="popup__close" tabindex="0">&#10006;</span>
+    <span id="popup__close" class="popup__close" tabindex="0"></span>
   </div>
   <div class="overlay"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="js/calc.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
